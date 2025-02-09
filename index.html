@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="user"></div>
+    </header>
+    <main>
+      <div id="quiz-container">
+        <h1>Quiz App</h1>
+        <p id="question-number">Question 1 of 5</p>
+        <h2 id="question">Question text will appear here.</h2>
+        <div id="multichoices">
+          <!-- Answer choices will be dynamically added here -->
+        </div>
+        <div id="buttons">
+          <button id="prev" class="nav-button" onclick="navigate(-1)" disabled>
+            Previous
+          </button>
+          <button id="next" class="nav-button" onclick="navigate(1)">
+            Next
+          </button>
+          <button
+            id="submit"
+            class="submit-button"
+            onclick="submitQuiz()"
+            style="display: none"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+
+      <div id="result-container" style="display: none">
+        <h2>Your Results</h2>
+        <p id="final-score"></p>
+        <p id="answer-summary"></p>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
